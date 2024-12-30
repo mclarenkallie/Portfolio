@@ -1,0 +1,449 @@
+<html> 
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+.intro {
+      text-align: center;
+      background-color: rgb(213, 242, 247);
+      padding: 50px;
+      font-size: 50px;
+
+    }
+
+    .column {
+      float: left;
+    }
+
+    .side {
+      width: 50%;
+    }
+
+    .main {
+      width: 50%;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .topnav a.active {
+    background-color: darkblue;
+    color: white;
+  }
+
+  .imageform {
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    /* width: 50%; */
+    /* border: 3px solid green; */
+    /* padding: 10px; */
+  }
+
+  .speech-bubble-top-right {
+    width: 400px; /* Set the width of the speech bubble */
+    height: 80px; /* Set the height of the speech bubble */
+    background: 
+    rgb(213, 242, 247); /* Set the background color of the speech bubble */
+    position: relative; /* Set the position of the speech bubble */
+    /*left:100px; /* Set the distance from the left edge of the containing element */
+    /*-moz-border-radius: 10px; /* Set the border radius for Mozilla Firefox */
+    /*-webkit-border-radius: 10px; /* Set the border radius for WebKit browsers */
+    border-radius: 10px; /* Set the border radius for other browsers */
+    margin-top: 50px;
+   /* margin-left: 50px;*/
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+    }
+
+  .speech-bubble-top-right:before {
+    content:""; /* Insert empty content before the speech bubble */
+    position: absolute; /* Set the position of the pseudo-element */
+    width: 0; /* Set the width of the pseudo-element */
+    height: 0; /* Set the height of the pseudo-element */
+    border-top: 30px solid 
+    transparent; /* Create the top triangle of the speech bubble */
+    border-right: 26px solid 
+    rgb(213, 242, 247); /* Create the right side of the speech bubble */
+    border-bottom: 2px solid 
+    transparent; /* Create the bottom triangle of the speech bubble */
+    margin: 20px 0 0 -38px; /*Set the margins to position the pseudo-element first moves down, last moves left
+    /* left: 10px; */
+    /* top: -12px; */
+    }
+
+    .speech-bubble-mid-right {
+    width: 400px; /* Set the width of the speech bubble */
+    height: 80px; /* Set the height of the speech bubble */
+    background: 
+    rgb(213, 242, 247); /* Set the background color of the speech bubble */
+    position: relative; /* Set the position of the speech bubble */
+    left: 30px; /* Set the distance from the left edge of the containing element */
+      -moz-border-radius: 10px; /* Set the border radius for Mozilla Firefox */
+      -webkit-border-radius: 10px; /* Set the border radius for WebKit browsers */
+    border-radius: 10px; /* Set the border radius for other browsers */
+    margin-top: 200px;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+    }
+
+  .speech-bubble-mid-right:before {
+    content:""; /* Insert empty content before the speech bubble */
+    position: absolute; /* Set the position of the pseudo-element */
+    width: 0; /* Set the width of the pseudo-element */
+    height: 0; /* Set the height of the pseudo-element */
+    border-top: 13px solid 
+    transparent; /* Create the top triangle of the speech bubble */
+    border-right: 28px solid 
+    rgb(213, 242, 247); /* Create the right side of the speech bubble */
+    border-bottom: 13px solid 
+    transparent; /* Create the bottom triangle of the speech bubble */
+    margin: 20px 0 0 -65px; /* Set the margins to position the pseudo-element */
+    }
+
+
+.speech-bubble-bottom-left {
+    width: 400px; /* Set the width of the speech bubble */
+    height: 80px; /* Set the height of the speech bubble */
+    background: rgb(213, 242, 247); /* Set the background color of the speech bubble */
+    position: relative; /* Set the position of the speech bubble */
+    /*margin-left: 300px; /* Adjust the position as needed */
+    border-radius: 10px; /* Set the border radius for rounded corners */
+    margin-top: 50px;
+    margin-left: 100px;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.speech-bubble-bottom-left:before {
+    content: ""; /* Insert empty content before the speech bubble */
+    position: absolute; /* Set the position of the pseudo-element */
+    width: 0; /* Set the width of the pseudo-element */
+    height: 0; /* Set the height of the pseudo-element */
+    border-left: 26px solid transparent; /* Create the left side of the arrow */
+    border-right: 2px solid transparent; /* Create the right side of the arrow */
+    border-bottom: 30px solid rgb(213, 242, 247); /* Create the bottom triangle of the speech bubble */
+    margin: -35px 0 0 300px;
+    /*top: -12px; /* Position the arrow above the bubble */
+    /*right: 10px; /* Align the arrow to the top-right corner */
+}
+
+
+.speech-bubble-top-left {
+    width: 400px; /* Set the width of the speech bubble */
+    height: 80px; /* Set the height of the speech bubble */
+    background: rgb(213, 242, 247); /* Set the background color of the speech bubble */
+    position: relative; /* Set the position of the speech bubble */
+    /*margin-left: 50px;
+    /*margin-right: 25px; /* Adjust the position as needed */
+    border-radius: 10px; /* Set the border radius for rounded corners */
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.speech-bubble-top-left:before {
+    content: ""; /* Insert empty content before the speech bubble */
+    position: absolute; /* Set the position of the pseudo-element */
+    width: 0; /* Set the width of the pseudo-element */
+    height: 0; /* Set the height of the pseudo-element */
+    border-top: 30px solid transparent; /* Create the top side of the arrow */
+    border-bottom: 2px solid transparent; /* Create the bottom side of the arrow */
+    border-left: 26px solid rgb(213, 242, 247); /* Create the left side of the arrow with the bubble's color */
+    margin: 20px 0 0 389px;
+    /*top: 10px; /* Position the arrow near the top of the bubble */
+    /*right: -13px; /* Position the arrow on the right edge of the bubble */
+}
+
+.speech-bubble-mid-left {
+    width: 400px; /* Set the width of the speech bubble */
+    height: 80px; /* Set the height of the speech bubble */
+    background: rgb(213, 242, 247); /* Set the background color of the speech bubble */
+    position: relative; /* Set the position of the speech bubble */
+    margin-left: 50px; /* Adjust the position as needed */
+    border-radius: 10px; /* Set the border radius for rounded corners */
+    margin-top: 200px;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.speech-bubble-mid-left:before {
+    content: ""; /* Insert empty content before the speech bubble */
+    position: absolute; /* Set the position of the pseudo-element */
+    width: 0; /* Set the width of the pseudo-element */
+    height: 0; /* Set the height of the pseudo-element */
+    border-top: 13px solid transparent; /* Create the top side of the arrow */
+    border-bottom: 13px solid transparent; /* Create the bottom side of the arrow */
+    border-left: 26px solid rgb(213, 242, 247); /* Create the left side of the arrow with the bubble's color */
+    margin: 20px 0 0 403px;
+    /*top: 10px; /* Position the arrow near the top of the bubble */
+    /*right: -13px; /* Position the arrow on the right edge of the bubble */
+}
+
+.speech-bubble-bottom-right {
+    width: 400px; /* Set the width of the speech bubble */
+    height: 80px; /* Set the height of the speech bubble */
+    background: rgb(213, 242, 247); /* Set the background color of the speech bubble */
+    position: relative; /* Set the position of the speech bubble */
+    /*margin-left: 100px; /* Adjust the position as needed */
+    border-radius: 10px; /* Set the border radius for rounded corners */
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.speech-bubble-bottom-right:before {
+    content: ""; /* Empty content for the arrow */
+    position: absolute; /* Position relative to the bubble */
+    width: 0; /* Arrow has no width */
+    height: 0; /* Arrow has no height */
+    border-left: 2px solid transparent; /* Left transparent side of the triangle */
+    border-right: 26px solid transparent; /* Right transparent side of the triangle */
+    border-bottom: 30px solid rgb(213, 242, 247); /* Bottom colored side of the triangle */
+    margin: -35px 0 0 25px;
+    /*top: -12px; /* Position the arrow above the bubble */
+    /*left: 10px; /* Align the arrow to the top-left corner */
+    
+}
+
+
+
+    .center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+.container {
+  display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Even space between columns */
+    align-items: flex-start; /* Align bubbles at the top */
+    gap: 350px; /* Optional: Add additional spacing */
+    width: 100%; /* Full width of the container */
+    max-width: 100%;
+    max-width: 1200px; /* Optional: Limit max width */
+    margin: 0 auto; /* Center the container on the page */
+    /*display: flex; /* Create a flex container */
+    /*justify-content: space-between; /* Distribute space evenly between the columns */
+    /*align-items: flex-start; /* Align items at the top */
+    /*gap: 20px; /* Optional: Add some space between the bubbles */
+}
+
+.bottomcontainer {
+  display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Even space between columns */
+    align-items: flex-start; /* Align bubbles at the top */
+    gap: 175px; /* Optional: Add additional spacing */
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Optional: Limit max width */
+    margin: 0 auto; /* Center the container on the page */
+    /*display: flex; /* Create a flex container */
+    /*justify-content: space-between; /* Distribute space evenly between the columns */
+    /*align-items: flex-start; /* Align items at the top */
+    /*gap: 20px; /* Optional: Add some space between the bubbles */
+}
+
+.columnthree {
+  float: left;
+  text-align: center;
+  width: 33.33%;
+}
+
+.button {
+  background-color: rgb(215, 255, 222);
+  padding: 15px;
+  border: none;
+  text-align: center;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color: lightgreen;
+}
+
+.introblock {
+  display: flex; 
+  justify-content: flex-end;
+}
+
+.centeritem {
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* background-color: rgb(213, 242, 247); */
+}
+.centerintro {
+  text-align: center;
+}
+.right {
+  text-align: right;
+  margin-right: 10px;
+}
+  </style>
+    <title>Kallie McLaren</title> 
+  </head>
+
+  <body> 
+    <!-- <div class="grid"> -->
+      <!-- <div class="centeritem"> -->
+        <!-- <p class="left"></p>
+        <p class="centerintro"></p>
+        <p class="right" style="text-align: right; margin-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 25px;"><b>Contact Me</b></p>
+
+        <p class="left"></p>
+        <h1 class="centerintro">Kallie McLaren</h1>
+        <p class="right" style="text-align: right; margin-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">(208) 534-1739</p>
+      
+        <p class="left"></p>
+        <p class="centerintro"></p>
+        <p class="right" style="text-align: right; margin-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">kalliemclaren730@gmail.com</p>  -->
+      <!-- </div> -->
+       <!-- <h1 class="left"></h1>
+       <h1 class="centerintro"></h1>
+      <div class="right">
+        <p style="text-align: right; margin-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 25px;"><b>Contact Me</b></p>
+        <p style="text-align: right; margin-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">(208) 534-1739</p>
+        <p style="text-align: right; margin-right: 20px; font-family: 'Times New Roman', Times, serif; font-size: 20px;">kalliemclaren730@gmail.com</p> 
+      </div>
+      <h1 class="left"></h1>
+      <h1 class="centerintro" style="font-family:sans-serif; font-size: 70px;">Kallie McLaren</h1>
+      
+    </div>   -->
+
+    <div class="intro">
+      <h1>Kallie McLaren</h1>
+    </div>
+
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="papers.html">Papers</a>
+    </div>
+
+    <div class="container"> 
+      <div class="column side"> 
+         <div class="speech-bubble speech-bubble-top-left">Master of Science in Computer Science from Idaho State University</div>
+      </div>
+      <div class="column main">
+         <div class="speech-bubble speech-bubble-top-right">Bachelor of Science in Applied Mathematics and Statistics from Idaho State University</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="left">
+        <div class="speech-bubble-mid-left">Thesis Topic: The Viability of Trojan Attacks on Machine Learning Models and Defense Mechanisms</div>
+      </div>
+      <div class="centerintro">
+        <img class="imageform" src="McLaren_Image.jpg" alt="Image of Kallie McLaren" width="400" height="400" >
+      </div>
+      <div class="right">
+        <div class="speech-bubble-mid-right" style="margin-left: 5px;">I have a passion for Machine Learning and Artificial Intelligence that stems from my love for math and statistics.</div>
+      </div>
+    </div>
+
+
+    <!-- <div class="row">
+      <div class="columnthree">
+        <div class="speech-bubble-mid-left">Thesis Topic: The Viability of Trojan Attacks on Machine Learning Models and Defense Mechanisms</div>
+      </div>
+      <div class="columnthree">
+        <img class="imageform" src="McLaren_Image.jpg" alt="Image of Kallie McLaren" width="400" height="400" >
+      </div>
+      <div class="columnthree">
+        <div class="speech-bubble-mid-right" style="margin-left: 5px;">I have a passion for Machine Learning and Artificial Intelligence that stems from my love for math and statistics.</div>
+      </div>
+    </div> -->
+
+
+    <div class="bottomcontainer"> 
+      <div class="column side"> 
+         <div class="speech-bubble-bottom-left">In my free time, I love sports and anything involving spending time with friends and family.</div>
+      </div>
+      <div class="column main">
+         <div class="speech-bubble-bottom-right">I strive for a challenge and always look for ways to obtain more knowledge. I enjoy problem solving and working with others to confront these problems.</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 100px; margin-bottom: 100px;">
+
+    <h1 style="text-align: center;">Learn More About My...</h1>
+
+    <div style="display: flex; gap: 40px; justify-content: center;">
+    <a href="resume.html">
+      <button class="button">Resume</button>
+    </a>
+
+    <a href="skills.html">
+      <button class="button">Skills</button>
+    </a>
+
+    <a href="projects.html">
+      <button class="button">Projects</button>
+    </a>
+
+    <a href="papers.html">
+      <button class="button">Papers</button>
+    </a>
+    </div>
+    </div>
+
+    <div style="margin-top: 100px; margin-bottom: 100px;">
+
+      <h1 style="text-align: center;">Contact Me</h1>
+      <h3 style="text-align: center;">(208) 534-1739</h3>
+      <h3 style="text-align: center;">kalliemclaren730@gmail.com</h3>
+    </div>
+
+  </body>
+</html>
